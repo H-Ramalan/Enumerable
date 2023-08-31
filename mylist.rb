@@ -2,6 +2,7 @@ require_relative 'myenumerable'
 class MyList
   include MyEnumerable
   attr_accessor :list
+
   def initialize(*args)
     @list = args
   end
