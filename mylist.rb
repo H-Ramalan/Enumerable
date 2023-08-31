@@ -10,7 +10,7 @@ class MyList
   end
 
   def each
-    for item in @list 
+    for item in @list
       yield item if block_given?
     end
   end
