@@ -1,6 +1,6 @@
 module MyEnumerable
   def all?
-    for item in @list
+    @list.each do |item|
       value = yield item if block_given?
       return value if value == false
     end
@@ -8,7 +8,7 @@ module MyEnumerable
   end
 
   def any?
-    for item in @list
+    @list.each do |item|
       value = yield item if block_given?
 
       return value if value == true
@@ -20,7 +20,7 @@ module MyEnumerable
   def filter
     selected = []
 
-    for item in @list
+    @list.each do |item|
       value = yield item if block_given?
 
       selected.push(item) if value == true
