@@ -4,7 +4,7 @@ module MyEnumerable
       value = yield item if block_given?
       return value if value == false
     end
-    value
+    true
   end
 
   def any?
@@ -12,7 +12,7 @@ module MyEnumerable
       value = yield item if block_given?
       return value if value == true
     end
-    value
+    false
   end
 
   def filter
